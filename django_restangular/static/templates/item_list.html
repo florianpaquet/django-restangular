@@ -1,0 +1,17 @@
+<ul class="nav nav-list">
+    <li class="nav-header">{{ group_name }}</li>
+    <li ng-repeat="item in items" style="position: relative;"> 
+       <a href="#">{{ item.name }}</a>
+       <button ng-click="deleteItem(item)" style="position: absolute; right: 0; top: 0;" class="btn btn-small btn-danger">x</button>
+    </li>
+    <li class="disabled" ng-show="!items.length"><a href="#">No items</a></li>
+    <li class="divider" ng-show="can_add"></li>
+    <li ng-show="can_add">
+        <form ng-submit="createItem(new_item_name)">
+            <div class="input-append">
+                <input class="input-medium" type="text" ng-model="new_item_name" placeholder="Create a new item">
+                <input type="submit" class="btn" type="button" value="Create">
+            </div>
+        </form>
+    </li>
+</ul>

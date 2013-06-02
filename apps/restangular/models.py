@@ -1,0 +1,15 @@
+# -*- coding:utf-8 -*-
+from django.db import models
+
+
+class Item(models.Model):
+    """
+    Simple test item model
+    """
+    name = models.CharField(u"Name", max_length=255)
+
+    class Meta:
+        ordering = ['name']
+
+    def __unicode__(self):
+        return self.name
