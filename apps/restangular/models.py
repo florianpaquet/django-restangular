@@ -8,8 +8,5 @@ class Item(models.Model):
     """
     name = models.CharField(u"Name", max_length=255)
 
-    class Meta:
-        ordering = ['name']
-
     def __unicode__(self):
         return self.name
