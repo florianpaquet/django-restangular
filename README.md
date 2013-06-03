@@ -13,6 +13,7 @@ Installation
 
 2.  Run development server :
         
+        python manage.py syncdb
         python manage.py runserver
 
     If you change the server port, you will also have to edit the port in the `services.js` file.
