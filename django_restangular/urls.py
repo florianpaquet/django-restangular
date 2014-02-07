@@ -2,7 +2,7 @@ from apps.restangular.models import Item
 from django.conf.urls import patterns, include, url
 from django.views.generic.base import TemplateView
 from rest_framework import viewsets
-from routers import CustomRouter
+from .routers import CustomRouter
 
 
 # REST framework routes
